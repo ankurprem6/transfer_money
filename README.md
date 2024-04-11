@@ -1,10 +1,10 @@
-About the Service
+About the Service -
 This service provides simple implementation of create account, get account and transfer money.
-You can call some REST endpoints defined in com.dws.challenge.web.AccountsController on port 18080.
+You can call the REST endpoints defined in com.dws.challenge.web.AccountsController on port 18080.
 
 To make this code production ready few things can be improved -
 
-1) There must multiple yaml or properties file based on the env code is running i.e QA, DEV, local and Production.
+1) There must be multiple yaml or properties file based on the code environment i.e QA, DEV, local and Production.
 
 2) Built-in monitoring, health checks, and metrics make it easier to create production-ready applications.
 

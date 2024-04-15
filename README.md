@@ -10,4 +10,10 @@ To make this code production ready few things can be improved -
 
 3) Authentication and authorisation should be provided to rest end points.
 
-4) In springboot application, account level locking should be replaced with distributed cache like redis.
+4) We can't rely on Java locking mechanism at all for transactions Synchronisation as in production there will be multiple applications deployed on infrastructure. So same account transaction on given point  in time can happen on multiple instances. One application instance won't be aware about transaction of other applications instances. This will lead to system inconsistency. So we will have to take support of either database table or distributed cache for maintaining account level lock.
+
+5) Glb configuration should be there for load balancing.
+
+6) For production ready, accounts needs to be store using database.
+
+7) For Observability use Dynatrace and Splunk.
